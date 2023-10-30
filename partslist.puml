@@ -1,0 +1,21 @@
+@startmindmap
+* device
+** pcb
+*** battery-charger
+*** voltage-regulator for microcontroller
+*** power
+**** volage-devider for adc
+**** INA226
+*** processor
+**** esp32
+**** esp8226
+**** attiny
+**** arduino
+*** gsm-device
+**** GM02S
+**** SIMCOM 7080G 
+** cable+bat attachment
+** case
+** antenna
+** lipo-battery
+@endmindmap

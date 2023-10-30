@@ -1,0 +1,39 @@
+@startuml
+actor WebUser as WU
+participant Device as D
+
+participant Server as S
+participant Database as DB
+actor Store as STORE
+
+group purchase
+
+WU --> S: Initial Purchase
+S --> DB: Store email, license, UUID other settings (SMS etc)
+S --> STORE: Email store address + UUID
+S --> WU: Email user with info
+
+end
+group setup
+
+D --> S: startup, sends UUID and Voltage
+S --> DB: store voltage
+DB --> S: return user info
+S --> S: Check logic for SMS sending etc based on UUID
+
+
+S --> WU: send sms
+S --> WU: send email
+
+end
+
+group view
+
+WU -> S: fetch stats
+S --> DB: fetch stats
+DB --> S: return stats
+S --> WU: return stats
+
+end
+
+@enduml
