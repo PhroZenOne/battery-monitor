@@ -26,6 +26,8 @@ and then program and assemble the rest of the parts (case, cables etc) at home.
 
 The total list of things needed to be populated on the PCB
 
+We might skip the battery!
+
 #### Battery charger
 
 We need a something that can take 12v+ to charge the lipo battery. 
@@ -37,9 +39,10 @@ We need a something that can take 12v+ to charge the lipo battery.
 
 #### Voltage reg
 
-How many amps do we need? Do we use Caps for bursts?
+AP1501-33K5G-13 | IC: PMIC; DC/DC converter; Uin: 4.5÷40VDC; Uout: 3.3VDC; 3A; TO263-5
+AP1501-33K5G-13
 
-[Mouser listing](https://eu.mouser.com/c/semiconductors/power-management-ics/voltage-regulators-voltage-controllers/ldo-voltage-regulators/?output%20voltage=3.3%20V&instock=y&normallystocked=y&sort=pricing)
+[ljcpcb] https://jlcpcb.com/partdetail/DiodesIncorporated-AP1501_33K5G13/C9982
 
 #### Voltage sensing
 
@@ -48,6 +51,11 @@ INA226 as power or on board adc?
 ##### INA226
 
 [specs](https://www.ti.com/product/INA226?utm_source=google&utm_medium=cpc&utm_campaign=asc-null-null-GPN_EN-cpc-pf-google-wwe&utm_content=INA226&ds_k=INA226&DCM=yes&gclsrc=ds&gclsrc=ds)
+
+[jlcpcb](https://jlcpcb.com/partdetail/TexasInstruments-INA226AIDGSR/C49851)
+
+$1.1713 - 1
+$0.84 -> 100
 
 #### Processor
 
@@ -73,6 +81,10 @@ Need to investigate ports needed for gsm-device + power sens
 ##### AtTiny
 
 Skipping wifi and other stuff, smallest possiblility
+
+##### STM32
+
+The smallest low powered versions "L" seems capable and cheap
 
 #### Gsm-device
 
